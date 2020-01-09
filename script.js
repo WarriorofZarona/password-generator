@@ -21,7 +21,7 @@ function generatePassword() {
 
     console.log("The length of the password is " + passwordLength);
 
-    var minChar = 8;
+    var minChar = 2;
     var maxChar = 128;
 
     // If the password is not a number, an alert pops up to warn the user, who must click the button again
@@ -83,10 +83,10 @@ function generatePassword() {
 
         //These are the arrays that will be used to generate the password, may eventually turn into an object
 
-        var charLower = ["abcdefghijklmnopqrstuvwxyz"];
-        var charUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-        var charNum = ["0123456789"];
-        var charSpecial = ["!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"];
+        var charLower = "abcdefghijklmnopqrstuvwxyz";
+        var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var charNum = "0123456789";
+        var charSpecial = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
         //The arrays are assigned a true or false value based on user input and put into this object
 
@@ -101,15 +101,29 @@ function generatePassword() {
 
     }
 
+    var passString = ""
+
     //This loop will run for as long as the length chosen by the user
 
     for (var i = 0; i < passwordLength; i++) {
 
-        function randomChar {
+        function randomChar(x, y) {
 
+            if (y = true) {
 
+                passString += x[Math.floor(Math.random() * x.length)];
 
+            }
         }
+
+
+        randomChar(charLower, useLowerCase);
+        randomChar(charUpper, useUpperCase);
+        randomChar(charNum, useNumeric);
+        randomChar(charSpecial, useSpecialChar);
+
     }
+
+    console.log(passString)
 
 }
