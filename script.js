@@ -87,8 +87,8 @@ function generatePassword() {
         var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         var charNum = "0123456789";
         var charSpecial = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+        var passArray = []
 
-        var passArray = [charLower, charUpper, charNum, charSpecial]
         //The arrays are assigned a true or false value based on user input and put into this object
 
 
@@ -99,12 +99,26 @@ function generatePassword() {
             charSpecial: useSpecialChar
 
         };
-        console.log(passChar)
+
+        function pushPass(x, y) {
+
+            if (y === true)
+
+                passArray.push(x);
+        }
+
+        pushPass(charLower, useLowerCase);
+        pushPass(charUpper, useUpperCase);
+        pushPass(charNum, useNumeric);
+        pushPass(charSpecial, useSpecialChar);
 
 
     }
 
-//     var passString = ""
+    console.log(passArray);
+
+}
+
 
 //     //This loop will run for as long as the length chosen by the user
 
@@ -127,4 +141,3 @@ function generatePassword() {
 //     randomChar(passChar)
 //     console.log(passString)
 
-// }
