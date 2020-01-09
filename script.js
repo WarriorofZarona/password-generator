@@ -104,7 +104,7 @@ function generatePassword() {
 
             if (y === true)
 
-                passArray.push(x);
+                passArray += (x);
         }
 
         pushPass(charLower, useLowerCase);
@@ -115,29 +115,20 @@ function generatePassword() {
 
     }
 
+
+    // This will now show all the characters that will be used to randomly generate the password based on length input
     console.log(passArray);
 
+
+    //This loop will run for as long as the length chosen by the user
+
+    for (var i = 0, passString = ""; i < passwordLength; i++) {
+
+        passString += passArray[Math.floor(Math.random() * passArray.length)]
+    }
+
+
+    console.log(passString)
+
 }
-
-
-//     //This loop will run for as long as the length chosen by the user
-
-//     function randomChar(x, y) {
-
-
-//         for (var i = 0; i < passwordLength; i++) {
-
-
-//             if (y = true) {
-
-//                 passString += x[Math.floor(Math.random() * x.length)];
-
-//             }
-//         }
-
-
-//     }
-
-//     randomChar(passChar)
-//     console.log(passString)
 
