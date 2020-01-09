@@ -13,7 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function userCriteria() {
+function generatePassword() {
 
     var minChar = 8;
     var maxChar = 128;
