@@ -24,9 +24,18 @@ function generatePassword() {
     var minChar = 8;
     var maxChar = 128;
 
+    // If the password is not a number, an alert pops up to warn the user, who must click the button again
+
+    if (isNaN(passwordLength)) {
+
+        alert("You must choose a number!");
+        console.log("User must click button again and choose a number");
+
+    }
+
     // If the password is less than 8 characters, an alert pops up to warn the user, who must click the button again
 
-    if (passwordLength < minChar) {
+    else if (passwordLength < minChar) {
 
         alert("Password length must be more than 8 characters!");
         console.log("User must click button again and choose 8 or more characters");
