@@ -25,12 +25,14 @@ function generatePassword() {
     if (passwordLength < minChar) {
 
         alert("Password length must be more than 8 characters!");
+        console.log("User must click button again and choose 8 or more characters");
 
     }
 
     else if (passwordLength > maxChar) {
 
         alert("Password length must be less than 128 characters!");
+        console.log("User must click button again and choose 128 or less characters")
 
 
     }
@@ -48,4 +50,7 @@ function generatePassword() {
 
 
     }
+
+
+
 }
