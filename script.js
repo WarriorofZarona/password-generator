@@ -81,15 +81,35 @@ function generatePassword() {
     else {
 
 
-
         //These are the arrays that will be used to generate the password, may eventually turn into an object
 
-        var charLower = ["abcdefghijklmnopqrstuvwxyz"]
-        var charUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        var charLower = ["abcdefghijklmnopqrstuvwxyz"];
+        var charUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
         var charNum = ["0123456789"];
-        var charSpecial = ["!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"]
+        var charSpecial = ["!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"];
+
+        //The arrays are assigned a true or false value based on user input and put into this object
+
+        var passChar = {
+            charLower: useLowerCase,
+            charUpper: useUpperCase,
+            charNum: useNumeric,
+            charSpecial: useSpecialChar
+
+        }
 
 
+    }
+
+    //This loop will run for as long as the length chosen by the user
+
+    for (var i = 0; i < passwordLength; i++) {
+
+        function randomChar {
+
+
+
+        }
     }
 
 }
