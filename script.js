@@ -39,6 +39,7 @@ function generatePassword() {
 
         alert("Password length must be more than 8 characters!");
         console.log("User must click button again and choose 8 or more characters");
+        passwordLength = 0;
 
     }
 
@@ -49,6 +50,7 @@ function generatePassword() {
 
         alert("Password length must be less than 128 characters!");
         console.log("User must click button again and choose 128 or less characters");
+        passwordLength = 0;
 
 
     }
@@ -91,14 +93,15 @@ function generatePassword() {
 
         //The arrays are assigned a true or false value based on user input and put into this object
 
+        // I did not find a use for this but I left it here in case I can use it for something else:
 
-        var passChar = {
-            charLower: useLowerCase,
-            charUpper: useUpperCase,
-            charNum: useNumeric,
-            charSpecial: useSpecialChar
+        // var passChar = {
+        //     charLower: useLowerCase,
+        //     charUpper: useUpperCase,
+        //     charNum: useNumeric,
+        //     charSpecial: useSpecialChar
 
-        };
+        // };
 
 
         //This function looks for any true inputs, then takes that property and puts it all together into one string
