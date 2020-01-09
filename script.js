@@ -18,16 +18,20 @@ function generatePassword() {
     var minChar = 8;
     var maxChar = 128;
     var passwordLength = parseInt(prompt("Enter the length of your password between 8 and 128"));
+    var useLowerCase = true;
+    var useUpperCase = true;
+    var useNumeric = true;
+    var useSpecialChar = true;
 
     if (passwordLength < minChar) {
 
-        alert("Password length must be more than 8 characters!")
+        alert("Password length must be more than 8 characters!");
 
     }
 
     else if (passwordLength > maxChar) {
 
-        alert("Password length must be less than 128 characters!")
+        alert("Password length must be less than 128 characters!");
 
     }
 
