@@ -48,7 +48,7 @@ function generatePassword() {
     else if (passwordLength > maxChar) {
 
         alert("Password length must be less than 128 characters!");
-        console.log("User must click button again and choose 128 or less characters")
+        console.log("User must click button again and choose 128 or less characters");
 
 
     }
@@ -63,17 +63,19 @@ function generatePassword() {
         var useUpperCase = confirm("Click OK to use uppercase characters");
         console.log("Use Upper Case: " + useUpperCase);
         var useNumeric = confirm("Click OK to use numbers");
-        console.log("Use Numerics: " + useNumeric)
+        console.log("Use Numerics: " + useNumeric);
         var useSpecialChar = confirm("Click OK to use special characters");
         console.log("Use Special Characters: " + useSpecialChar);
 
 
     }
 
+    //If the booleans are all false, this alert will pop up and the code will stop
+
     if (useLowerCase === false && useUpperCase === false && useNumeric === false && useSpecialChar === false) {
 
-        alert("You must choose atleast ONE type of character to use for your password!")
-        console.log("User must click button again and choose atleast one character type")
+        alert("You must choose atleast ONE type of character to use for your password!");
+        console.log("User must click button again and choose atleast one character type");
     }
 
     else {
