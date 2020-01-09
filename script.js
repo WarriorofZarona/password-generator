@@ -100,6 +100,8 @@ function generatePassword() {
 
         };
 
+
+        //This function looks for any true inputs, then takes that property and puts it all together into one string
         function pushPass(x, y) {
 
             if (y === true)
@@ -120,15 +122,18 @@ function generatePassword() {
     console.log(passArray);
 
 
-    //This loop will run for as long as the length chosen by the user
+    //This loop will run for as long as the length chosen by the user, randomly choosing a character from the string until finished
 
-    for (var i = 0, passString = ""; i < passwordLength; i++) {
+    for (var i = 0, passwordStr = ""; i < passwordLength; i++) {
 
-        passString += passArray[Math.floor(Math.random() * passArray.length)]
+        passwordStr += passArray[Math.floor(Math.random() * passArray.length)];
     }
 
 
-    console.log(passString)
+    console.log(passwordStr)
+    return passwordStr
+
+
 
 }
 
