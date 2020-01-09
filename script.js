@@ -70,11 +70,24 @@ function generatePassword() {
 
     }
 
-    //These are the arrays that will be used to generate the password, may eventually turn into an object
+    if (useLowerCase === false && useUpperCase === false && useNumeric === false && useSpecialChar === false) {
 
-    var charLower = ["abcdefghijklmnopqrstuvwxyz"]
-    var charUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var charNum = ["0123456789"];
-    var charSpecial = ["!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"]
+        alert("You must choose atleast ONE type of character to use for your password!")
+        console.log("User must click button again and choose atleast one character type")
+    }
+
+    else {
+
+
+
+        //These are the arrays that will be used to generate the password, may eventually turn into an object
+
+        var charLower = ["abcdefghijklmnopqrstuvwxyz"]
+        var charUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        var charNum = ["0123456789"];
+        var charSpecial = ["!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"]
+
+
+    }
 
 }
