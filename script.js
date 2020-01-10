@@ -13,14 +13,14 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Starting my coding here
 function generatePassword() {
 
     // Ask the user for a password length
 
     var passwordLength = parseInt(prompt("Enter the length of your password between 8 and 128"));
 
-    console.log("The length of the password is " + passwordLength);
-
+    // Setting the min and max characters for the prompt
     var minChar = 8;
     var maxChar = 128;
 
@@ -29,7 +29,6 @@ function generatePassword() {
     if (isNaN(passwordLength)) {
 
         alert("You must choose a number!");
-        console.log("User must click button again and choose a number");
 
     }
 
@@ -38,7 +37,6 @@ function generatePassword() {
     else if (passwordLength < minChar) {
 
         alert("Password length must be more than 8 characters!");
-        console.log("User must click button again and choose 8 or more characters");
         passwordLength = 0;
 
     }
@@ -49,62 +47,46 @@ function generatePassword() {
     else if (passwordLength > maxChar) {
 
         alert("Password length must be less than 128 characters!");
-        console.log("User must click button again and choose 128 or less characters");
         passwordLength = 0;
 
 
     }
 
 
-    // These confirms assign booleans which will be used later to generate the password based on the criteria
+    // User inputs the booleans which will be used later to generate the password based on the criteria
 
     else {
 
         var useLowerCase = confirm("Click OK to use lowercase characters");
-        console.log("Use Lower Case: " + useLowerCase);
         var useUpperCase = confirm("Click OK to use uppercase characters");
-        console.log("Use Upper Case: " + useUpperCase);
         var useNumeric = confirm("Click OK to use numbers");
-        console.log("Use Numerics: " + useNumeric);
         var useSpecialChar = confirm("Click OK to use special characters");
-        console.log("Use Special Characters: " + useSpecialChar);
-
 
     }
 
-    //If the booleans are all false, this alert will pop up and the code will stop
+    // If the booleans are all false, this alert will pop up and the code will stop
 
     if (useLowerCase === false && useUpperCase === false && useNumeric === false && useSpecialChar === false) {
 
         alert("You must choose atleast ONE type of character to use for your password!");
-        console.log("User must click button again and choose atleast one character type");
     }
 
     else {
 
 
-        //These are the arrays that will be used to generate the password, may eventually turn into an object
+
+        // These are the arrays that will be used to generate the password
 
         var charLower = "abcdefghijklmnopqrstuvwxyz";
         var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         var charNum = "0123456789";
         var charSpecial = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+        // This variable will eventually store the string of characters to be used for password generation
         var charStr = ""
 
-        //The arrays are assigned a true or false value based on user input and put into this object
 
-        // I did not find a use for this but I left it here in case I can use it for something else:
-
-        // var passChar = {
-        //     charLower: useLowerCase,
-        //     charUpper: useUpperCase,
-        //     charNum: useNumeric,
-        //     charSpecial: useSpecialChar
-
-        // };
-
-
-        //This function looks for any true inputs, then takes that property and puts it all together into one string
+        //This function looks for any true inputs, then takes the array and puts it all together into charStr as one string 
         function pushChar(x, y) {
 
             if (y) {
@@ -122,9 +104,6 @@ function generatePassword() {
     }
 
 
-    // This will now show all the characters that will be used to randomly generate the password based on length input
-    console.log(charStr);
-
 
     //This loop will run for as long as the length chosen by the user, randomly choosing a character from the string until finished
 
@@ -133,8 +112,7 @@ function generatePassword() {
         passwordStr += charStr[Math.floor(Math.random() * charStr.length)];
     }
 
-
-    console.log(passwordStr)
+    //This will return the value of the randomly generated string
     return passwordStr
 
 
