@@ -107,9 +107,10 @@ function generatePassword() {
         //This function looks for any true inputs, then takes that property and puts it all together into one string
         function pushPass(x, y) {
 
-            if (y)
+            if (y) {
 
                 passArray += (x);
+            }
         }
 
         pushPass(charLower, useLowerCase);
