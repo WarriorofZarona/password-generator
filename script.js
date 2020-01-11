@@ -84,16 +84,22 @@ function generatePassword() {
 
         // This variable will eventually store the string of characters to be used for password generation
         var charStr = ""
+        var guaranteedChar = []
 
 
-        //This function looks for any true inputs, then takes the array and puts it all together into charStr as one string 
+        // This function looks for any true inputs, then takes the array and puts it all together into charStr as one string
+        // It will also take one random character from any true value strings to be placed in an array for later
+
         function pushChar(x, y) {
 
             if (y) {
 
                 charStr += (x);
+                guaranteedChar.push(x[Math.floor(Math.random() * x.length)]);
             }
         }
+
+        // The function runs through each character variable
 
         pushChar(charLower, useLowerCase);
         pushChar(charUpper, useUpperCase);
@@ -103,19 +109,33 @@ function generatePassword() {
 
     }
 
-
-
-    //This loop will run for as long as the length chosen by the user, randomly choosing a character from the string until finished
+    // This loop will run for as long as the length chosen by the user, randomly choosing a character from charStr until finished
 
     for (var i = 0, passwordStr = ""; i < passwordLength; i++) {
 
         passwordStr += charStr[Math.floor(Math.random() * charStr.length)];
     }
 
-    //This will return the value of the randomly generated string
-    return passwordStr
+    // This will turn the randomly generated string into an array
+    // This step was necessary as arrays make it easier to change the values rather than each character of a string
+    var passwordArray = passwordStr.split("");
 
+
+    // This loop will replace the first few characters of the generated array to guarantee that any true confirms 
+    //for a character will show up in the final password
+
+    for (var i = 0; i < guaranteedChar.length; i++) {
+
+        passwordArray[i] = guaranteedChar[i];
+
+    }
+
+    // This will finally turn the array back into a single string
+    finalPassword = passwordArray.join('');
+
+
+    //This will return the value of the final generated string to the user
+    return finalPassword;
 
 
 }
-
