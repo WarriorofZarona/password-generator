@@ -100,7 +100,7 @@ function generatePassword() {
             }
         }
 
-        // The function runs through each of the variables, the result is a single string called charStr
+        // The function runs through each of the variables
 
         pushChar(charLower, useLowerCase);
         pushChar(charUpper, useUpperCase);
