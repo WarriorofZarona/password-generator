@@ -75,7 +75,7 @@ function generatePassword() {
 
 
 
-        // These are the arrays that will be used to generate the password
+        // These are the strings that will be used to generate the password
 
         var charLower = "abcdefghijklmnopqrstuvwxyz";
         var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
