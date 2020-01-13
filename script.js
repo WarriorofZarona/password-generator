@@ -110,7 +110,7 @@ function generatePassword() {
 
     }
 
-    // This loop will run for as long as the length chosen by the user, randomly choosing a character from charStr and 
+    // This loop will run for as long as the length of passwordLength, randomly choosing a character from charStr and 
     // placing it into passwordStr until finished
 
     for (var i = 0, passwordStr = ""; i < passwordLength; i++) {
