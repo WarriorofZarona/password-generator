@@ -82,7 +82,7 @@ function generatePassword() {
         var charNum = "0123456789";
         var charSpecial = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
-        // These variables will eventually store the string of characters to be used for password generation
+        // These variables will eventually store the string/array of characters to be used for password generation
 
         var charStr = ""
         var guaranteedChar = []
