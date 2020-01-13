@@ -88,7 +88,7 @@ function generatePassword() {
         var guaranteedChar = []
 
 
-        // This function looks for any true inputs, then takes the array and puts it all together into charStr as one string
+        // This function looks for any true inputs, then takes any true string and concatenates it into charStr as one string
         // It will also take one random character from any true value strings to be placed in an array for later
 
         function pushChar(x, y) {
