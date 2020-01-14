@@ -133,7 +133,7 @@ function generatePassword() {
     }
 
     // This will finally turn the array back into a single string called finalPassword
-    finalPassword = passwordArray.join('');
+    var finalPassword = passwordArray.join('');
 
 
     //This will return the value of finalPassword
