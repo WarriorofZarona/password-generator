@@ -87,7 +87,7 @@ function generatePassword() {
         var charStr = ""
         var guaranteedChar = []
 
-        // Created a random generator variable to be used in the rest of the code
+        // Created a random generator function to be used in the rest of the code
         function randomNum(a) {
 
             var number = Math.floor(Math.random() * a.length);
