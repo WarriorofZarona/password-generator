@@ -87,6 +87,14 @@ function generatePassword() {
         var charStr = ""
         var guaranteedChar = []
 
+        // Created a random generator variable to be used in the rest of the code
+        function randomNum(a) {
+
+            var number = Math.floor(Math.random() * a.length);
+            return number;
+
+        }
+
 
         // This function looks for any true inputs, then takes the corresponding string and concatenates it into charStr as one string
         // It will also take one random character from any true value strings to be pushed in an array for later
@@ -96,7 +104,7 @@ function generatePassword() {
             if (y) {
 
                 charStr += (x);
-                guaranteedChar.push(x[Math.floor(Math.random() * x.length)]);
+                guaranteedChar.push(x[randomNum(x)]);
             }
         }
 
@@ -115,7 +123,7 @@ function generatePassword() {
 
     for (var i = 0, passwordStr = ""; i < passwordLength; i++) {
 
-        passwordStr += charStr[Math.floor(Math.random() * charStr.length)];
+        passwordStr += charStr[randomNum(charStr)];
     }
 
     // This will turn passwordStr from a string into an array called passwordArray
