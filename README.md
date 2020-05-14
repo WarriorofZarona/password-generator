@@ -1,5 +1,6 @@
 
 # Password Generator ![GitHub package.json version](https://img.shields.io/github/package-json/v/WarriorofZarona/Good-README-Generator)
+![Password Generator](/Password-Generator.png)
 Generate a password based on user crendentials
 
 # Tables of Contents
